@@ -1,5 +1,6 @@
 import React from "react";
-import { Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Instagram, Linkedin, Facebook, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
             {/* LOGO */}
             <div className="flex items-center gap-2 text-white">
               <span className="text-xl font-semibold">
-             <img src="/footer.png" width={200} />
+                <img src="/footer.png" width={200} alt="Anchor Score" />
               </span>
             </div>
 
@@ -35,16 +36,40 @@ export default function Footer() {
             {/* SOCIAL */}
             <div className="mt-6 flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/anchorscore/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="p-2 border border-gray-700 rounded hover:bg-gray-800"
               >
                 <Instagram size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/myanchorscore/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="p-2 border border-gray-700 rounded hover:bg-gray-800"
               >
                 <Linkedin size={16} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61567991578795"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="p-2 border border-gray-700 rounded hover:bg-gray-800"
+              >
+                <Facebook size={16} />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UC8WIU7ZnCVlCxZhqnZUkmIQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="p-2 border border-gray-700 rounded hover:bg-gray-800"
+              >
+                <Youtube size={16} />
               </a>
             </div>
           </div>
@@ -53,10 +78,10 @@ export default function Footer() {
           <div className="md:justify-self-end">
             <h4 className="text-sm font-semibold text-white mb-4">Links</h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">About Anchor Score</a></li>
-              <li><a href="#" className="hover:text-white">Methodology</a></li>
-              <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white">Terms of Use</a></li>
+              <li><Link to="/" className="hover:text-white">About Anchor Score</Link></li>
+              <li><Link to="/methodology" className="hover:text-white">Methodology</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-use" className="hover:text-white">Terms of Use</Link></li>
             </ul>
           </div>
 
